@@ -10,7 +10,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        NavigationView {
+            VStack {
+                NavigationLink(destination: FirstView()) {
+                    Text("Navigate to First View")
+                        .padding()
+                        .foregroundColor(.white)
+                        .frame(width: 250, height: 250, alignment: .center)
+                        .background(Color.orange)
+                }
+                NavigationLink(destination: SecondView()) {
+                    Text("Navigate to Second View")
+                        .lineLimit(nil)
+                        .padding()
+                        .foregroundColor(.white)
+                        .frame(width: 250, height: 250, alignment: .center)
+                        .background(Color.black)
+                }
+            }
+        }
     }
 }
 
